@@ -13,7 +13,6 @@
     };
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -44,7 +43,7 @@
 
           boot.initrd.luks = {
             devices."root" = {
-              device = "/dev/disk/by-uuid/294031c9-eb35-4151-b78b-fb54af2162bb";
+              device = "/dev/disk/by-uuid/e2fffd54-b835-4e11-8662-9fb595c4900d";
               preLVM = false;
               fallbackToPassword = true;
             };
@@ -55,7 +54,7 @@
               fsType = "ext4";
             };
             "/boot" = {
-              device = "/dev/disk/by-uuid/8E25-35C9";
+              device = "/dev/disk/by-uuid/2255-0FAD";
               fsType = "vfat";
             };
           };
